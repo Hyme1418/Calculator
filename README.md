@@ -24,7 +24,6 @@ To test the addition operation in the calculator by verifying that it correctly 
       |------------------------------|----------------------|--------------------|--------------------|
       | C1 = *value of firstNumber*   | greater than 0       | equal to 0         | less than 0        |
       | C2 = *value of secondNumber*  | greater than 0       | equal to 0         | less than 0        |
-      | C3 = *operator is empty*      | True                 | False              |                    |
 
     - **Functionality-Based Characteristics**:
     
@@ -40,7 +39,6 @@ To test the addition operation in the calculator by verifying that it correctly 
       |------------------------------|----------------------|--------------------|--------------------|
       | C1 = *value of firstNumber*   | 2       | 0         | -2        |
       | C2 = *value of secondNumber*  | 3       | 0         | -3        |
-      | C3 = *operator is empty*      | ''                 | '+'              |                    |
 
     - **Functionality-Based Characteristics**:
     
@@ -50,21 +48,20 @@ To test the addition operation in the calculator by verifying that it correctly 
 
 - **Combine partitions to define test requirements**:
   - **Assumption**: choose one value from each block
-  - **Test requirements**: number of tests (upper bound) = 3
+  - **Test requirements**: number of tests (upper bound) = 2
 
-- **Derive test values and expected values** (pick from interface-based):  
+- **Derive test values and expected values** (interface-based):  
     `Each Choice Coverage (ECC)`
     | **Test** | **firstNumber** | **secondNumber** | **Expected result** |
     |--------------------|---|---|---|
-    | T1 (0, 0, True)    | 0 | 0 | x |
-    | T2 (>0, >0, False) | 2 | 3 | 5 |
-    | T3 (<0, <0, False) | -2 | -3 | -5 |
+    | T1 (>0, >0, False) | 2 | 3 | 5 |
+    | T2 (<0, <0, False) | -2 | -3 | -5 |
 
 
 ## testPower()
 
 ### Goal of the test case:
-To test the power operation in the calculator by verifying that it correctly handles the power of two numbers.
+To test the power operation in the calculator by verifying that it correctly handles the base number (firstNumber) raised to the power of exponent (secondNumber).
 
 ### Input Domain Modelling:
 
@@ -75,7 +72,7 @@ To test the power operation in the calculator by verifying that it correctly han
   - **Parameters**: `firstNumber`, `secondNumber`, `operator`
   - **Return Type**: `double`
   - **Return Value**: Result of the calculation
-  - **Exceptional Behavior**: ??
+  - **Exceptional Behavior**: If the base number `firstNumber` is equal to 0, the expected result will be inifinity.
 
 - **Model the Input Domain**:
 
@@ -87,13 +84,12 @@ To test the power operation in the calculator by verifying that it correctly han
       |------------------------------|----------------------|--------------------|--------------------|
       | C1 = *value of firstNumber*   | greater than 0       | equal to 0         | less than 0        |
       | C2 = *value of secondNumber*  | greater than 0       | equal to 0         | less than 0        |
-      | C3 = *operator is empty*      | True                 | False              |                    |
 
     - **Functionality-Based Characteristics**:
     
-      | **Characteristic**              | **b1**              | **b2**             | **b3**             |
-      |---------------------------------|---------------------|--------------------|--------------------|
-      | C1 = *result of the calculation*| greater than 0      | equal to 0         | less than 0        |
+      | **Characteristic**              | **b1**              | **b2**             | **b3**             | **b4** |
+      |---------------------------------|---------------------|--------------------|--------------------|--------|
+      | C1 = *result of the calculation*| greater than 0      | equal to 0         | less than 0        | infinity |
 
   - **Identify (possible) values**:
     
@@ -103,7 +99,6 @@ To test the power operation in the calculator by verifying that it correctly han
       |------------------------------|----------------------|--------------------|--------------------|
       | C1 = *value of firstNumber*   | 2       | 0         | -2        |
       | C2 = *value of secondNumber*  | 3       | 0         | -3        |
-      | C3 = *operator is empty*      | ''                 | '+'              |                    |
 
     - **Functionality-Based Characteristics**:
     
@@ -113,6 +108,11 @@ To test the power operation in the calculator by verifying that it correctly han
 
 - **Combine partitions to define test requirements**:
   - **Assumption**: choose all possible combinations
-  - **Test requirements**: number of tests (upper bound) = 3 * 3 = 9
+  - **Test requirements**: number of tests (upper bound) = 2
 
-- **Derive test values and expected values**:
+- **Derive test values and expected values** (interface-based):
+    `Each Choice Coverage (ECC)`
+    | **Test** | **firstNumber** | **secondNumber** | **Expected result** |
+    |--------------------|---|---|---|
+    | T1 (>0, >0, False) | 2 | 3 | 8 |
+    | T2 (<0, <0, False) | -2 | -3 | -8 |

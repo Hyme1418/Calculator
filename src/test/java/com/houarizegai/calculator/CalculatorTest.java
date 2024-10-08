@@ -20,6 +20,7 @@ public class CalculatorTest {
         assertEquals(-1.1, calculatorUI.calculate(-2.2, 1.1, '+'));
         assertEquals(0, calculatorUI.calculate(1.1, -1.1, '+'));
         assertEquals(0, calculatorUI.calculate(1, -1/2, '+'));
+        assertEquals(0, calculatorUI.calculate(1, -1/2, ''));
     }
 
     @Test
