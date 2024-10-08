@@ -49,11 +49,11 @@ To test the addition operation in the calculator by verifying that it correctly 
       | C1 = *result of the calculation*| 5      | 0         | -5        |
 
 - **Combine partitions to define test requirements**:
-  - **Assumption**: choose one value from each block (Each Coice Coverage: ECC)
+  - **Assumption**: choose one value from each block
   - **Test requirements**: number of tests (upper bound) = 3
 
 - **Derive test values and expected values** (pick from interface-based):
-
+**Each Choice Coverage (ECC)**
     | **Test** | **firstNumber** | **secondNumber** | **Expected result** |
     |--------------------|---|---|---|
     | T1 (0, 0, True)    | 0 | 0 | x |
