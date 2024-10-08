@@ -24,9 +24,8 @@ To test the addition operation in the calculator by verifying that it correctly 
 | C2 = *value of secondNumber*  | greater than 0 | equal to 0 | less than 0 |
 | C3 = *operator is empty*      |  True  | False  |
 
-- Functionality-based  
+#### Functionality-based  
 | **Characteristic**            | **b1** | **b2** | **b3** |
 |-------------------------------|--------|--------|--------|
 | C1 = *result of the calculation*   | greater than 0 | equal to 0 | less than 0 |
-t
 
