@@ -52,7 +52,7 @@ To test the addition operation in the calculator by verifying that it correctly 
   - **Assumption**: choose one value from each block
   - **Test requirements**: number of tests (upper bound) = 3
 
-- **Derive test values and expected values** (pick from interface-based):
+- **Derive test values and expected values** (pick from interface-based):  
 **Each Choice Coverage (ECC)**
     | **Test** | **firstNumber** | **secondNumber** | **Expected result** |
     |--------------------|---|---|---|
