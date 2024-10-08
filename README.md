@@ -16,7 +16,7 @@ To test the addition operation in the calculator by verifying that it correctly 
 - Exceptional behavior: ?? 
 3. Model the input domain
 ### Partition characteristic:
-#### Interface-based
+#### Interface-base
 | **Characteristic**            | **b1** | **b2** | **b3** |
 |-------------------------------|--------|--------|--------|
 | C1 = *value of firstNumber*   | greater than 0 | equal to 0 | less than 0 |
