@@ -20,7 +20,6 @@ public class CalculatorTest {
         assertEquals(-1.1, calculatorUI.calculate(-2.2, 1.1, '+'));
         assertEquals(0, calculatorUI.calculate(1.1, -1.1, '+'));
         assertEquals(0, calculatorUI.calculate(1, -1/2, '+'));
-        assertEquals(0, calculatorUI.calculate(1, -1/2, ''));
     }
 
     @Test
@@ -28,7 +27,7 @@ public class CalculatorTest {
         calculatorUI = new CalculatorUI();
         assertEquals(9, calculatorUI.calculate(3,2,'^'));
         assertEquals(0.25, calculatorUI.calculate(2, -2, '^'));
-        assertEquals(4, calculatorUI.calculate(-2,2,'^'));
+        assertEquals(Double.POSITIVE_INFINITY, calculatorUI.calculate(0,-2,'^'));
     }
 
 }

@@ -12,7 +12,9 @@ To test the addition operation in the calculator by verifying that it correctly 
   - **Parameters**: `firstNumber`, `secondNumber`, `operator`
   - **Return Type**: `double`
   - **Return Value**: Result of the calculation
-  - **Exceptional Behavior**: ??
+  - **Exceptional Behavior**:
+    - **Non-Numeric Input**: If any input is non-numeric (like a string or special character), it should throw an error.
+    - **Fraction Input**: If fractions like `1/2` are entered, the system should reject it and throw an error since fractions are not supported (but decimals like `0.5` are).
 
 - **Model the Input Domain**:
 
@@ -73,7 +75,10 @@ To test the power operation in the calculator by verifying that it correctly han
   - **Parameters**: `firstNumber`, `secondNumber`, `operator`
   - **Return Type**: `double`
   - **Return Value**: Result of the calculation
-  - **Exceptional Behavior**: If the base number `firstNumber` is equal to 0 and exponent `secondNumber` is equal to negative number, the expected result will be inifinity.
+  - **Exceptional Behavior**:
+    - **Non-Numeric Input**: If any input is non-numeric, an error should be thrown.
+    - **Fraction Input**: If fractions like `1/2` are entered, the system will reject it and throw an error since fractions are not supported. Decimal equivalents (like `0.5`) are allowed.
+    - **Zero Raised to Negative Power**: If `firstNumber` is `0` and `secondNumber` is negative, the result will be infinity.
 
 - **Model the Input Domain**:
 
@@ -105,7 +110,7 @@ To test the power operation in the calculator by verifying that it correctly han
     
       | **Characteristic**              | **b1**              | **b2**             | **b3**             | **b4** | **b5** |
       |---------------------------------|---------------------|--------------------|--------------------|--------|--------|
-      | C1 = *result of the calculation*| 8      | 1 | 0         | -8        | infiinity |
+      | C1 = *result of the calculation*| 8      | 1 | 0         | -0.125        | infiinity |
 
 - **Combine partitions to define test requirements**:
   - **Assumption**: choose one value from each block
@@ -118,5 +123,5 @@ To test the power operation in the calculator by verifying that it correctly han
     | T1 (>0, >0) | 2 | 3 | 8 |
     | T2 (>0, 0)  | 2 | 0 | 1 |
     | T3 (0, >0)  | 0 | 3 | 0 |
-    | T4 (<0, <0) | -2 | -3 | -8 |
+    | T4 (<0, <0) | -2 | -3 | -0.125 |
     | T5 (0, <0)  | 0 | -3 | infinity |
