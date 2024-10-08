@@ -53,11 +53,12 @@ To test the addition operation in the calculator by verifying that it correctly 
   - **Test requirements**: number of tests (upper bound) = 3
 
 - **Derive test values and expected values** (pick from interface-based):
-| **Test** | **firstNumber** | **secondNumber** | **Expected result** |
-|--------------------|---|---|---|
-| T1 (0, 0, True)    | 0 | 0 | x |
-| T2 (>0, >0, False) | 2 | 3 | 5 |
-| T3 (<0, <0, False) | -2 | -3 | -5 |
+
+    | **Test** | **firstNumber** | **secondNumber** | **Expected result** |
+    |--------------------|---|---|---|
+    | T1 (0, 0, True)    | 0 | 0 | x |
+    | T2 (>0, >0, False) | 2 | 3 | 5 |
+    | T3 (<0, <0, False) | -2 | -3 | -5 |
 
 
 ## testPower()
