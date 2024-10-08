@@ -12,7 +12,7 @@ To test the addition operation in the calculator by verifying that it correctly 
   - **Parameters**: `firstNumber`, `secondNumber`, `operator`
   - **Return Type**: `double`
   - **Return Value**: Result of the calculation
-  - **Exceptional Behavior**: (To be determined based on the calculator's error handling; e.g., invalid operator, division by zero)
+  - **Exceptional Behavior**: ??
 
 - **Model the Input Domain**:
 
@@ -31,3 +31,19 @@ To test the addition operation in the calculator by verifying that it correctly 
       | **Characteristic**              | **b1**              | **b2**             | **b3**             |
       |---------------------------------|---------------------|--------------------|--------------------|
       | C1 = *result of the calculation*| greater than 0      | equal to 0         | less than 0        |
+
+  - **Identify (possible) values**:
+    
+    - **Interface-Based Characteristics**:
+    
+      | **Characteristic**           | **b1**               | **b2**             | **b3**             |
+      |------------------------------|----------------------|--------------------|--------------------|
+      | C1 = *value of firstNumber*   | 2       | 0         | -2        |
+      | C2 = *value of secondNumber*  | 3       | 0         | -3        |
+      | C3 = *operator is empty*      | ''                 | '+'              |                    |
+
+    - **Functionality-Based Characteristics**:
+    
+      | **Characteristic**              | **b1**              | **b2**             | **b3**             |
+      |---------------------------------|---------------------|--------------------|--------------------|
+      | C1 = *result of the calculation*| 5      | 0         | -5        |
