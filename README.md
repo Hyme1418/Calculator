@@ -52,7 +52,7 @@ To test the addition operation in the calculator by verifying that it correctly 
   - **Assumption**: choose one value from each block
   - **Test requirements**: number of tests (number of largest characteristic) = 3
 
-- **Derive test values and expected values**:  
+- **Derive test values and expected values**:
     `Each Choice Coverage (ECC)`
     | **Test** | **firstNumber** | **secondNumber** | **Expected result** |
     |--------------------|---|---|---|
