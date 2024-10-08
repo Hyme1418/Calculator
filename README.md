@@ -47,3 +47,9 @@ To test the addition operation in the calculator by verifying that it correctly 
       | **Characteristic**              | **b1**              | **b2**             | **b3**             |
       |---------------------------------|---------------------|--------------------|--------------------|
       | C1 = *result of the calculation*| 5      | 0         | -5        |
+
+- **Combine partitions to define test requirements**:
+  - **Assumption**: choose all possible combinations
+  - **Test requirements**: number of tests (upper bound) = 3 * 3 = 4
+
+- **Derive test values and expected values**:
